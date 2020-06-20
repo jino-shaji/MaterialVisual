@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Material Form"
+             Visual="Material"
+             x:Class="MaterialVisual.Views.MaterialForm">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" 
+                     Padding="10"
+                     BackgroundColor="White">
+                <!--Default-->
+                <Label Text="Name" 
+                   Margin="0,0,0,-10" />
+                <Entry
+                    Placeholder="Full Name" />
+
+                <!-- Disabled -->
+                <Label Text="Age (Disabled)" 
+                   Margin="0,0,0,-10" />
+                <Entry
+                    Placeholder="Enter age here"
+                    PlaceholderColor="{StaticResource QuaternaryColor}" Keyboard="Numeric" MaxLength="2" />
+                <!-- PlaceholderColor -->
+                <Label Text="Email" 
+                   Margin="0,0,0,-10" />
+                <Entry
+                    Placeholder="Enter email here"
+                    PlaceholderColor="{StaticResource QuaternaryColor}" Keyboard="Email" />
+
+                <!-- PlaceholderColor and TextColor -->
+                <Label Text="Phone" 
+                   Margin="0,0,0,-10" />
+                <Entry
+                    Keyboard="Telephone"
+                    Placeholder="Enter phone here"
+                    PlaceholderColor="{StaticResource QuinaryColor}"
+                    TextColor="{StaticResource PrimaryColor}" />
+
+                <!-- PlaceholderColor, TextColor, BackgroundColor -->
+                <Label Text="Description" 
+                   Margin="0,0,0,-10" />
+                
+                <Editor AutoSize="TextChanges" 
+                    Placeholder="Description"
+                    PlaceholderColor="{StaticResource QuaternaryColor}"
+                    TextColor="{StaticResource IndigoColor}"
+                    BackgroundColor="{StaticResource SecondaryColor}" />
+
+                <Label Text="Date of Birth" 
+                     Margin="0,0,0,-10" />
+                <DatePicker MinimumDate="01/01/1990"
+                    MaximumDate="12/31/2010"
+                    Date="03/01/1996"
+                    TextColor="{StaticResource PrimaryColor}" />
+
+                <Label Text="Qualification" 
+                        Margin="0,0,0,-10" />
+                <Picker Title="Select a Qualification "
+                    TitleColor="{StaticResource QuaternaryColor}"
+                    TextColor="{StaticResource TextColor}">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Bachelor Degree</x:String>
+                            <x:String>Master Degree</x:String>
+                            <x:String>Phd</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="Preferences"
+                    Margin="0,0,0,-10" />
+                <StackLayout Orientation="Horizontal">
+                    <Label Padding="0,5,0,0" TextColor="{StaticResource TextColor}" Text="Pref 1"></Label>
+                    <CheckBox  Color="{StaticResource PrimaryColor}"
+                      HorizontalOptions="CenterAndExpand"></CheckBox>
+                    <Label TextColor="{StaticResource TextColor}" Padding="0,5,0,0" Text="Pref 2"></Label>
+                    <CheckBox Color="{StaticResource PrimaryColor}"
+                      IsChecked="true"
+                      HorizontalOptions="CenterAndExpand"></CheckBox>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button WidthRequest="150" BackgroundColor="{StaticResource PrimaryColor}" Text="Submit"></Button>
+                    <Button WidthRequest="150" HorizontalOptions="CenterAndExpand" BackgroundColor="{StaticResource QuinaryColor}" Text="Cancel"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MaterialVisual.Views.MainPage"
+             Title="Xamarin Material Design"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             xmlns:local="clr-namespace:MaterialVisual.Views" 
+             Visual="Material">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource SecondaryColor}" Margin="10,10,10,10" Orientation="Vertical">
+            <Label FontSize="Title" TextColor="{StaticResource QuinaryColor}" Text="Xamarin Material Design Demo By KodeOverflow"></Label>
+            <Button Text="Material Button" WidthRequest="250"  HorizontalOptions="CenterAndExpand" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:Button}"
+                        BackgroundColor="{StaticResource PrimaryColor}"></Button>
+
+            <Button Text="Material Form" WidthRequest="250" HorizontalOptions="CenterAndExpand" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:MaterialForm}"
+                        BackgroundColor="{StaticResource PrimaryColor}"></Button>
+
+           
+            
+            <Label>ActivityIndicator</Label>
+            <ActivityIndicator IsRunning="True" Color="{StaticResource QuinaryColor}"></ActivityIndicator>
+
+            <Label>Slider</Label>
+            <Slider Minimum="-100" 
+                Maximum="100" 
+                IsEnabled="True"
+                ThumbColor="{StaticResource PrimaryColor}" 
+                MaximumTrackColor="{StaticResource QuinaryColor}" 
+                MinimumTrackColor="{StaticResource PrimaryColor}" />
+
+            <Button Text="My Blog" WidthRequest="250" HorizontalOptions="CenterAndExpand" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:WebView}"
+                        BackgroundColor="{StaticResource QuinaryColor}"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

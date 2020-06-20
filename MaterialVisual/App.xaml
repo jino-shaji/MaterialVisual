@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MaterialVisual.App">
+    <Application.Resources>
+        <Color x:Key="PrimaryColor">#3f51b5</Color>
+        <Color x:Key="IndigoColor">#673ab7</Color>
+        <Color x:Key="SecondaryColor">#f2f2f2</Color>
+        <Color x:Key="BackgroundColor">#f2f2f2</Color>
+        <Color x:Key="TertiaryColor">#fafafa</Color>
+        <Color x:Key="QuaternaryColor">#7FBA00</Color>
+        <Color x:Key="QuinaryColor">#F25022</Color>
+
+        <Color x:Key="TextColor">#1d1d1d</Color>
+        <Color x:Key="SecondaryTextColor">#ffffff</Color>
+    </Application.Resources>
+</Application>
