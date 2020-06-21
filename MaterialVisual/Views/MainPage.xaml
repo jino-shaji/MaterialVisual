@@ -18,8 +18,9 @@
             <Button Text="Material Form" WidthRequest="250" HorizontalOptions="CenterAndExpand" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:MaterialForm}"
                         BackgroundColor="{StaticResource PrimaryColor}"></Button>
 
-           
-            
+            <Button Text="Material Card" WidthRequest="250" HorizontalOptions="CenterAndExpand" Command="{Binding NavigateCommand}" CommandParameter="{x:Type local:CardView}"
+                        BackgroundColor="{StaticResource PrimaryColor}"></Button>
+
             <Label>ActivityIndicator</Label>
             <ActivityIndicator IsRunning="True" Color="{StaticResource QuinaryColor}"></ActivityIndicator>
 

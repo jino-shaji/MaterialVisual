@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:MaterialVisual"
+             mc:Ignorable="d"
+             Visual="Material"
+             Title="Material Card"
+            x:Class="MaterialVisual.Views.CardView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="20" 
+                     Padding="10"
+                     BackgroundColor="White">
+                <Label Text="Default" 
+                   Margin="0,0,0,-10" />
+                <Frame HasShadow="True" Padding="16">
+                    <StackLayout Spacing="16">
+                        <Image Source="{local:ImageResource  MaterialVisual.Assets.MaterialCard.jpg}" 
+                           Margin="-16,-16,-16,0" 
+                           Aspect="AspectFill" />
+                        <Label Text="Xamarin Material Card" 
+                           FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                        <Label Text="I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively."
+                           TextColor="{StaticResource TextColor}"
+                           FontSize="14" />
+                        <Button Text="more" TextColor="{StaticResource PrimaryColor}" BackgroundColor="{StaticResource SecondaryColor}"
+                            HorizontalOptions="End" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="No Shadow" 
+                   Margin="0,0,0,-10" />
+                <Frame Padding="16" 
+                   HasShadow="false">
+                    <StackLayout Spacing="16">
+                        <Image Source="{local:ImageResource MaterialVisual.Assets.MaterialCard.jpg}" 
+                           Margin="-16,-16,-16,0" 
+                           Aspect="AspectFill" />
+                        <Label Text="Xamarin Material Card" TextColor="{StaticResource TextColor}" FontSize="24" />
+                        <Label Text="I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively."
+                           TextColor="{StaticResource TextColor}"
+                           FontSize="14" />
+                        <Button Text="more" TextColor="{StaticResource SecondaryColor}" BackgroundColor="{StaticResource PrimaryColor}"
+                            HorizontalOptions="End" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="BorderColor" 
+                   Margin="0,0,0,-10" />
+                <Frame Padding="16" 
+                   BorderColor="{StaticResource QuaternaryColor}">
+                    <StackLayout Spacing="16">
+                        <Image Source="{local:ImageResource MaterialVisual.Assets.MaterialCard.jpg}" 
+                           Margin="-16,-16,-16,0" 
+                           Aspect="AspectFill" />
+                        <Label Text="Xamarin Material Card"
+                           FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                        <Label Text="I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively."
+                           TextColor="{StaticResource TextColor}" 
+                           FontSize="14" />
+                        <Button Text="more" 
+                            HorizontalOptions="End" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="BorderColor with No Shadow"
+                   Margin="0,0,0,-10" />
+                <Frame Padding="16" 
+                   BorderColor="{StaticResource QuaternaryColor}"
+                   HasShadow="false">
+                    <StackLayout Spacing="16">
+                        <Image Source="{local:ImageResource MaterialVisual.Assets.MaterialCard.jpg}" 
+                           Margin="-16,-16,-16,0"
+                           Aspect="AspectFill" />
+                        <Label Text="Xamarin Material Card" 
+                           FontSize="24" 
+                           TextColor="{StaticResource TextColor}"/>
+                        <Label Text="I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively."
+                           TextColor="{StaticResource TextColor}" 
+                           FontSize="14" />
+                        <Button Text="more" 
+                            HorizontalOptions="End" />
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="No Card Padding and Thin Content Padding"
+                   Margin="0,0,0,-10" />
+                <Frame Padding="0"
+                   BorderColor="{StaticResource IndigoColor}"
+                   CornerRadius="10">
+                    <StackLayout Spacing="16" 
+                             BackgroundColor="{StaticResource IndigoColor}" 
+                             Padding="8">
+                        <Image Source="{local:ImageResource MaterialVisual.Assets.MaterialCard.jpg}" 
+                           Margin="-8,-8,-8,0" 
+                           Aspect="AspectFill" />
+                        <Label Text="Xamarin Material Card" 
+                           FontSize="24" 
+                           TextColor="{StaticResource SecondaryTextColor}"/>
+                        <Label Text="I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively."
+                           TextColor="{StaticResource SecondaryTextColor}" 
+                           FontSize="14" />
+                        <Button Text="more" HorizontalOptions="End" TextColor="{StaticResource SecondaryColor}" BackgroundColor="{StaticResource QuinaryColor}"></Button>
+                    </StackLayout>
+                </Frame>
+
+                <Label Text="Customized Card" 
+                   Margin="0,0,0,-10" />
+                <Frame BackgroundColor="{StaticResource SecondaryColor}"
+                   Margin="0" 
+                   Padding="0"
+                   HasShadow="true"
+                   CornerRadius="10" 
+                   BorderColor="{StaticResource IndigoColor}">
+                    <StackLayout Spacing="16" Margin="0" Padding="0">
+                        <Label Padding="10,10,0,0" Text="Customized Card" 
+                           FontSize="24"
+                           TextColor="{StaticResource PrimaryColor}" />
+                        <Image Source="{local:ImageResource MaterialVisual.Assets.MaterialCard.jpg}"
+                           Margin="-16,0" 
+                           Aspect="AspectFill" />
+                        <Label Padding="10,10,10,10" Text="This card has a few changes to its appearance to test whether or not changing properties is supported."
+                           TextColor="{StaticResource PrimaryColor}" 
+                           FontSize="14" />
+                        <Button Text="more" HorizontalOptions="End"
+                            BackgroundColor="{StaticResource QuaternaryColor}" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
