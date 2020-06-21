@@ -21,7 +21,7 @@
                 <!-- Disabled -->
                 <Label Text="Age (Disabled)" 
                    Margin="0,0,0,-10" />
-                <Entry
+                <Entry IsEnabled="False"
                     Placeholder="Enter age here"
                     PlaceholderColor="{StaticResource QuaternaryColor}" Keyboard="Numeric" MaxLength="2" />
                 <!-- PlaceholderColor -->
